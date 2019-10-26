@@ -28,6 +28,7 @@ namespace SDKTemplate
         };
 
         public static string SampleMovieURL = "http://profficialsite.origin.mediaservices.windows.net/c51358ea-9a5e-4322-8951-897d640fdfd7/tearsofsteel_4k.ism/manifest(format=mpd-time-csf)";
+        public static string LicenseServerURL = "http://playready.directtaps.net/pr/svc/rightsmanager.asmx?PlayRight=1&SecurityLevel=3000";
     }
 
     public class Scenario

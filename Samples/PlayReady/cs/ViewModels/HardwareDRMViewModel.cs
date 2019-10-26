@@ -21,7 +21,7 @@ namespace SDKTemplate.ViewModels
     public class HardwareDRMViewModel : ViewModelBase
     {
         private string moviePath = MainPage.SampleMovieURL;
-        private string licenseUrl = "http://playready.directtaps.net/pr/svc/rightsmanager.asmx?PlayRight=1&SecurityLevel=2000";
+        private string licenseUrl = MainPage.LicenseServerURL;
 
         public RelayCommand CmdUseHardware { get; private set; }
         public RelayCommand CmdUseSoftware { get; private set; }
@@ -160,6 +160,22 @@ namespace SDKTemplate.ViewModels
                 if (moviePath != value)
                 {
                     moviePath = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public string LicenseServerURL
+        {
+            get
+            {
+                return licenseUrl;
+            }
+            set
+            {
+                if (licenseUrl != value)
+                {
+                    licenseUrl = value;
                     RaisePropertyChanged();
                 }
             }
